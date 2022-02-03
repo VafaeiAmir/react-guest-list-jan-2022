@@ -52,7 +52,7 @@ function All() {
 
   // Add user
   async function createUser(input1, input2) {
-    const response = await fetch(`${baseUrl}/guests`, {
+    const response = await fetch(`${baseUrl}/`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -71,7 +71,7 @@ function All() {
   // Remove guest
 
   async function handleRemove(id) {
-    const response = await fetch(`${baseUrl}/guests/${id}`, {
+    const response = await fetch(`${baseUrl}${id}`, {
       method: 'DELETE',
     });
     const deletedGuest = await response.json();
@@ -91,7 +91,7 @@ function All() {
 
   useEffect(() => {
     async function getAllGuests() {
-      const response = await fetch(`${baseUrl}/guests`);
+      const response = await fetch(`${baseUrl}/`);
       const allGuests = await response.json();
       console.log(allGuests);
       setGuestsList(allGuests);
