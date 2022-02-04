@@ -174,9 +174,8 @@ function All() {
   const [guestsList, setGuestsList] = useState([]);
   const [remove, setDelete] = useState(false);
 
-  // Add user
   async function createUser(input1, input2) {
-    const response = await fetch(`${baseUrl}/guests`, {
+    const response = await fetch(`${baseUrl}/guests/`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -191,8 +190,6 @@ function All() {
     aetFirstName('');
     setLastName('');
   }
-
-  // Remove guest
 
   async function handleRemove(id) {
     const response = await fetch(`${baseUrl}/guests/${id}`, {
@@ -215,7 +212,7 @@ function All() {
 
   useEffect(() => {
     async function getAllGuests() {
-      const response = await fetch(`${baseUrl}/guests`);
+      const response = await fetch(`${baseUrl}/guests/`);
       const allGuests = await response.json();
       console.log(allGuests);
       setGuestsList(allGuests);
@@ -234,7 +231,7 @@ function All() {
       <div>
         <div css={inputStyle}>
           <label>
-            First Name
+            First name
             <input
               css={nameFieldStyle}
               value={firstName}
@@ -246,7 +243,7 @@ function All() {
           </label>
           <br />
           <label>
-            Last Name
+            Last name
             <input
               css={nameFieldStyle}
               value={lastName}
