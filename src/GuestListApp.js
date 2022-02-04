@@ -168,7 +168,7 @@ function Guest(props) {
   );
 }
 function All() {
-  const [firstName, aetFirstName] = useState('');
+  const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
   const [loading, setLoading] = useState(true);
   const [guestsList, setGuestsList] = useState([]);
@@ -187,7 +187,7 @@ function All() {
     });
     const createdGuest = await response.json();
     console.log(createdGuest);
-    aetFirstName('');
+    setFirstName('');
     setLastName('');
   }
 
@@ -236,7 +236,7 @@ function All() {
               css={nameFieldStyle}
               value={firstName}
               onChange={(event) => {
-                aetFirstName(event.currentTarget.value);
+                setFirstName(event.currentTarget.value);
               }}
               disabled={disabled}
             />
@@ -279,7 +279,7 @@ function All() {
               });
             }}
           >
-            Remove guests
+            Remove all
           </button>
         </div>
         <div css={guestListStyle}>
@@ -300,6 +300,7 @@ function All() {
                         id={e.id}
                       />
                       <button
+                        aria-label="Remove"
                         css={removeBoxStyle}
                         onClick={() => {
                           handleRemove(e.id).catch((error) => {
@@ -307,7 +308,7 @@ function All() {
                           });
                         }}
                       >
-                        ✕
+                        Remove
                       </button>
                     </div>
                   );
