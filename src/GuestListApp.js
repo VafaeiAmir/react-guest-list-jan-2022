@@ -202,8 +202,8 @@ function All() {
 
   // Remove all
 
-  async function handleRemoveGuests() {
-    await guestsList.forEach((guest) => {
+  function handleRemoveGuests() {
+    guestsList.forEach((guest) => {
       handleRemove(guest.id).catch((error) => console.error(error));
     });
   }
