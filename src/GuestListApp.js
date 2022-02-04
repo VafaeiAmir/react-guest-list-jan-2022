@@ -238,7 +238,7 @@ function All() {
               onChange={(event) => {
                 aetFirstName(event.currentTarget.value);
               }}
-              disabled={disabled}
+              // disabled={disabled}
             />
           </label>
           <br />
@@ -257,7 +257,7 @@ function All() {
                   });
                 }
               }}
-              disabled={disabled}
+              // disabled={disabled}
             />
           </label>
           <br />
