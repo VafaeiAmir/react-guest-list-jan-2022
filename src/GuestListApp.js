@@ -226,7 +226,7 @@ function All() {
   const disabled = loading ? true : false;
   return (
     <div className="App">
-      <h1 css={firstBodyTextStale}> Bienvenido al restaurante El Gaucho</h1>
+      <h1 css={firstBodyTextStale}> Bienvenido al restaurante </h1>
       <h1 css={firstBodyTextStale}>Lista de reservas</h1>
       <div>
         <div css={inputStyle}>
