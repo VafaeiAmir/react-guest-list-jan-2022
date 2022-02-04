@@ -223,7 +223,7 @@ function All() {
     });
   }, [lastName, remove]);
 
-  // const disabled = loading ? true : false;
+  const disabled = loading ? true : false;
   return (
     <div className="App">
       <h1 css={firstBodyTextStale}> Bienvenido al restaurante El Gaucho</h1>
@@ -238,7 +238,7 @@ function All() {
               onChange={(event) => {
                 aetFirstName(event.currentTarget.value);
               }}
-              // disabled={disabled}
+              disabled={disabled}
             />
           </label>
           <br />
@@ -257,7 +257,7 @@ function All() {
                   });
                 }
               }}
-              // disabled={disabled}
+              disabled={disabled}
             />
           </label>
           <br />
