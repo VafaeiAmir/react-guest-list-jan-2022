@@ -125,7 +125,7 @@ const pleaseTextStyle = css`
 `;
 const baseUrl = 'http://amirs-guest-list.herokuapp.com';
 
-// item of each guest
+// item of each user
 function Guest(props) {
   const [attending, setAttending] = useState(props.attending);
 
