@@ -123,7 +123,7 @@ const textAttStyle = css`
 const pleaseTextStyle = css`
   margin-right: 2rem;
 `;
-const baseUrl = 'https://amirs-rest-guest-list.herokuapp.com/';
+const baseUrl = 'https://amirs-rest-guest-list.herokuapp.com';
 
 // item of each user
 function Guest(props) {
