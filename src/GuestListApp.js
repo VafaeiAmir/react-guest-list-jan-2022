@@ -172,7 +172,7 @@ function All() {
   const [lastName, setLastName] = useState('');
   const [loading, setLoading] = useState(true);
   const [guestsList, setGuestsList] = useState([]);
-  const [remove, setDelete] = useState(false);
+  const [remove, setRemove] = useState(false);
 
   async function createUser(input1, input2) {
     const response = await fetch(`${baseUrl}/guests/`, {
@@ -197,7 +197,7 @@ function All() {
     });
     const deletedGuest = await response.json();
     console.log(deletedGuest);
-    setDelete(!remove);
+    setRemove(!remove);
   }
 
   // Remove all
